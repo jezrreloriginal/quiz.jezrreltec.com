@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Perguntas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+     
+            <label for="nome_jogador1"></label>
+            <input type="text" id="nome_jogador1" name="nome_jogador1" required placeholder="Jogador 01">
+            <label for="pontuacao_jogador1"></label>
+            <input type="number" id="pontuacao_jogador1" name="pontuacao_jogador1" required placeholder="pontos">
+        </div>
+        <div class="jogador">
+            <label for="nome_jogador2"></label>
+            <input type="text" id="nome_jogador2" name="nome_jogador2" required placeholder="Jogador 2">
+            <label for="pontuacao_jogador2"></label>
+            <input type="number" id="pontuacao_jogador2" name="pontuacao_jogador2" required placeholder="pontos">
+        </div>
+    </div>
+
+    <div class="time">
+        <form name="form_main">
+            <button type="button" name="start" class="tempo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              
+                <!-- Ícone do botão Start -->
+            </button>
+            <button type="button" name="pause" class="tempo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M6 19h-4v-14h4v14zm8-14v14h-4v-14h4z"/>
+              </svg>
+              
+                <!-- Ícone do botão Pause -->
+            </button>
+            <button type="button" name="reset" class="tempo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M0 0h24v24h-24z"/>
+                <path d="M21.35 10.44c-.32-.31-.85-.09-1.04.36c-.49 1.17-1.35 2.13-2.46 2.74c-1.83.87-4.03.47-5.5-1.01c-1.7-1.7-1.85-4.34-.36-6.09c1.01-1.22 2.47-1.77 4.04-1.77c2.88 0 5.17 2.29 5.17 5.17c0 2.34-1.9 4.23-4.23 4.23c-2.13 0-3.93-1.61-4.2-3.73c-.05-.44-.4-.77-.84-.77c-.49 0-.88.39-.88.88c0 3.38 2.75 6.13 6.13 6.13c3.16 0 5.89-2.38 6.12-5.54c.02-.29-.07-.57-.28-.78z"/>
+              </svg>
+              
+                <!-- Ícone do botão Reset -->
+            </button>
+        </form>
+    </div>
+
+    <div class="relogio">
+        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+    </div>
+
+    <div class="question-container" style="color: rgba(0, 0, 0, 0.568);">
+        <div id="question" class="question"></div>
+        <div id="alternatives" class="alternatives"></div>
+    </div>
+    <div class="acao">
+        <button id="next-question-btn">Próxima</button>
+        <button id="add-question-btn">Editar</button>
+    </div>
+    <div id="add-question-form" class="hidden" style="margin-top: 50px;">
+        <label for="new-question" class="txt"></label>
+        <input type="text" id="new-question" class="txt" required placeholder="Nova Pergunta:"><br>
+        <label for="option-a" class="txt"></label>
+        <input type="text" id="option-a" class="txt" required placeholder="Opção A:"><br>
+        <label for="option-b" class="txt"></label>
+        <input type="text" id="option-b" class="txt" required placeholder="Opção B:"><br>
+        <label for="option-c" class="txt"></label>
+        <input type="text" id="option-c" class="txt" required placeholder="Opção C:"><br>
+        <label for="option-d" class="txt"></label>
+        <input type="text" id="option-d" class="txt" required placeholder="Opção D:"><br>
+        <label for="correct-answer" class="txt"></label>
+        <input type="text" id="correct-answer" class="txt" required placeholder="Resposta Correta (A, B, C ou D):"><br>
+        <button id="submit-question-btn">Adicionar</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
